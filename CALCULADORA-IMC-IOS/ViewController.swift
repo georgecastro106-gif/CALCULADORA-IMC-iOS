@@ -41,14 +41,24 @@ class ViewController: UIViewController {
         switch result {
         case 00.0..<18.5:
             resultDescriptionLabel.text = "Bajo peso"
+            resultDescriptionLabel.textColor = UIColor.bmiUnderweight
+            resultLabel.textColor = UIColor.bmiUnderweight
         case 18.5..<25.0:
             resultDescriptionLabel.text = "Peso normal"
+            resultDescriptionLabel.textColor = UIColor.bmiNormal
+            resultLabel.textColor = UIColor.bmiNormal
         case 25.0..<30.0:
             resultDescriptionLabel.text = "Sobrepeso"
-        case 25.0..<30.0:
+            resultDescriptionLabel.textColor = UIColor.bmiOverweight
+            resultLabel.textColor = UIColor.bmiOverweight
+        case 30.0..<35.0:
             resultDescriptionLabel.text = "Obesidad"
+            resultDescriptionLabel.textColor = UIColor.bmiObesity
+            resultLabel.textColor = UIColor.bmiObesity
         default:
             resultDescriptionLabel.text = "Obesidad extrema"
+            resultDescriptionLabel.textColor = UIColor.bmiExtremeObesity
+            resultLabel.textColor = UIColor.bmiExtremeObesity
         }
     }
 }
